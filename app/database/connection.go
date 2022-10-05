@@ -1,6 +1,7 @@
 package database
 
 import (
+	"github.com/essaherlandy/absensi/app/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -16,5 +17,5 @@ func Connect() {
 
 	DB = connection
 
-	// connection.AutoMigrate(&models.User)
+	connection.AutoMigrate(&models.User{})
 }
